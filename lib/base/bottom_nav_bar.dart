@@ -9,18 +9,26 @@ class BottomNavBar extends StatefulWidget {
 }
 
 class _BottomNavBarState extends State<BottomNavBar> {
+  //list is iterated using the index
+  final appScreens = [
+    const Center(child: Text("Home")),
+    const Center(child: Text("Search")),
+    const Center(child: Text("Tickets")),
+    const Center(child: Text("Profile")),
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Center(child: const Text("My tickets"))),
-      body: const Center(child: Text("Ticket Info")),
+      body: appScreens[0],
       bottomNavigationBar: BottomNavigationBar(
         selectedItemColor: Colors.blueGrey,
         unselectedItemColor: const Color(0xFF526400),
         showSelectedLabels: false,
         items: [
           BottomNavigationBarItem(
-            icon: Icon(FluentSystemIcons.ic_fluent_home_add_regular),
+            icon: Icon(FluentSystemIcons.ic_fluent_home_regular),
             activeIcon: Icon(FluentSystemIcons.ic_fluent_home_filled),
             label: "Home",
           ),
