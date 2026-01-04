@@ -20,11 +20,18 @@ class HomeScreen extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text("Good Morning", style: AppStyles.headLineStyle3),
-                        SizedBox(height: 5),
+                        const SizedBox(height: 5),
                         Text("Book Tickets", style: AppStyles.headLineStyle1),
                       ],
                     ),
-                    Container(width: 100, height: 70, color: Colors.red),
+                    Container(
+                      width: 50,
+                      height: 50,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                        color: Colors.red,
+                      ),
+                    ),
                   ],
                 ),
                 Row(
